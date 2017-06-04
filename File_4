@@ -1,0 +1,50 @@
+Make a new class and write the following code.
+
+public class appLogs {
+
+    String message;
+
+    appLogs(String msg) {
+        this.message = msg;
+    }
+
+    public String write() {
+        String time="";
+        try {
+
+            File dir = new File(Environment.getExternalStorageDirectory(), "Logs");
+            System.out.println("Directory:" + dir);
+            if (!dir.exists()) {
+                System.out.println("Not  existing");
+                dir.mkdirs();
+            }
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat(
+                    "yyyy_MM_dd_HH_mm_ss");
+            Date date = new Date();
+            String filename = "App_Logs.txt";
+            time = dateFormat.format(date);
+            // Write the file into the folder
+            File logFile = new File(dir, "Logging.txt");
+            BufferedWriter bw = new BufferedWriter(new FileWriter(logFile, true));
+            bw.write(time+":        "+message);
+            bw.newLine();
+            bw.flush();
+
+            File reportFile = new File(dir, filename);
+            FileWriter fileWriter = new FileWriter(reportFile);
+            fileWriter.append(dateFormat.format(date)+":        "+message);
+            fileWriter.flush();
+            fileWriter.close();
+        } catch (Exception e) {
+            Log.e("ExceptionHandler", e.getMessage());
+        }
+        return time;
+    }
+
+}
+
+
+Call from any activity
+
+final String d=new appLogs("Lock toggling Request. Sending get request to url:"+url).write();
