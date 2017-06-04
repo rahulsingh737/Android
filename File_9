@@ -1,0 +1,10 @@
+Add these lines to onCreate function
+        
+        setTitle("Available locks");  //set some title to be shown over action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //display back button
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#c74d16"))  //change action bar color
+        
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.setStatusBarColor(Color.parseColor("#992d25"));    //change status bar color
+        }
