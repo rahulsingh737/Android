@@ -1,6 +1,6 @@
 # Android
 
-I will keep on sharing important snippets related to Android.
+I will keep on sharing important snippets related to Android. These snippets worked fine with AppCompatActivity.
 
 1.SharedPreferences (storing small data into device like remember user)
 
