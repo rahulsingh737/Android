@@ -25,5 +25,3 @@ I will keep on sharing important snippets related to Android. These snippets wor
 11.JsonObject, JsonArray and JSONParser
 
 12.Designs for a particular element using XML file in drawable
-
-13.Menu design using XML files on actionbar
