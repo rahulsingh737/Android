@@ -16,7 +16,7 @@ I will keep on sharing important snippets related to Android. These snippets wor
 
 7.Bundle put extras (sharing data among different activities)
 
-8.Vector assets (common icons for buttons)
+8.Menu design using XML files on actionbar
 
 9.ActionBar and StatusBar
 
