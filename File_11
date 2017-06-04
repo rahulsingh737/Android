@@ -1,0 +1,10 @@
+                            JsonParser jp = new JsonParser();
+                            JsonArray ja = (JsonArray) jp.parse(response);  //parse data as json array
+                       or   JsonObject obj = (JsonObject) jp.parse(response); //parse data as json object
+                       
+                            JsonObject obj = (JsonObject) ja.get(i);  //get json object from json array
+                            
+                            String name = obj.get("name").toString().replace("\"","");  //get value from json object
+                            
+                            JsonArray ja = (JsonArray) obj.get("urls");  //get json array from json object
+                            
