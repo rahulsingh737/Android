@@ -1,0 +1,5 @@
+HashMap<String, String> hmap = new HashMap<String, String>(); //pairing structure of Hash Maps
+
+String value_map = hmap.get(name);  //get value from map for a key
+
+hmap.put(name, "Developer");  // add/update value of key to map
