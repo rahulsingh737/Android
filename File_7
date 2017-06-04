@@ -1,0 +1,21 @@
+Setting data to be used by another activity
+
+            Intent intent = new Intent(this, AcitivityB.class);
+            Bundle extras = new Bundle();
+            extras.putSerializable("urls",urls);
+            intent.putExtras(extras);
+            intent.putExtra("user", "tester");
+            intent.putExtra("location", location);
+            startActivity(intent);
+            
+            
+            
+Retrieving data from Bundle
+
+            Bundle bundle = getIntent().getExtras();
+            user = bundle.getString("user");
+            urls = (HashMap<String, String>) bundle.getSerializable("urls");
+            location = bundle.getString("location");
+            
+            
+      
