@@ -1,0 +1,17 @@
+Data is kind of map (key value pair)
+
+Search data in local file
+                
+                SharedPreferences sharedPreferences =  getSharedPreferences("user_Login", Context.MODE_PRIVATE);
+                String user = sharedPreferences.getString("username","NA"); 
+                String pass = sharedPreferences.getString("password","NA");
+                //1st parameter the key looking for and 2nd default value if key not found
+                
+                
+Add data in local file                
+
+                SharedPreferences sharedPreferences = getSharedPreferences("user_Login", Context.MODE_PRIVATE);
+                final SharedPreferences.Editor editor = sharedPreferences.edit(); 
+                editor.putString("username",user);
+                editor.putString("password",pass);
+                editor.commit();
