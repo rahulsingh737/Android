@@ -1,0 +1,40 @@
+//calling background task from some function
+
+                MyActivity.MyTask mt = new MyActivity.MyTask(String.valueOf(btn_id),String.valueOf(txt_id), name, value);
+                mt.execute(String.valueOf(btn_id),String.valueOf(txt_id), name, value,lock_location);
+
+
+class MyTask extends AsyncTask<String, Void, Void> {
+   
+        public MyTask(String btn_id, String txt_id,String name, String status) {
+            super();
+            
+            // do stuff while calling contructor like setting some local variables
+        }
+
+        @Override
+        protected void onPreExecute() {
+  //before starting background job
+        }
+
+        @Override
+        protected Void doInBackground(String... params) {
+
+        //do something in background
+        //call progress update by following
+        
+        publishProgress();
+        
+        return null;
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            //update progress, post some status
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+          //completion of background job
+        }
+    }
