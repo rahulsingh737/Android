@@ -27,3 +27,5 @@ I will keep on sharing important snippets related to Android. These snippets wor
 12.Designs for a particular element using XML file in drawable
 
 13.List as dialog
+
+14.AsyncTask for performing some tasks like polling in background
