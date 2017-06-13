@@ -1,3 +1,5 @@
+//splash.java
+
 public class splash extends AppCompatActivity {
 
     @Override
@@ -40,3 +42,38 @@ public class splash extends AppCompatActivity {
     }
 
 }
+
+
+
+//splash.xml
+
+<TextView
+        android:text="SPLASH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="55dp"
+        android:textColor="@android:color/white"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/logo_icon"/>
+
+
+//rotate.xml inside anim folder
+
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <rotate
+        android:duration="2000"
+        android:fromDegrees="0"
+        android:toDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"></rotate>
+</set>
