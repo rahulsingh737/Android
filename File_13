@@ -1,0 +1,31 @@
+onclick button:   viewList();
+                  showDialogListView(listView);
+
+//listView is a ListView type object poniting to some element defined in xml.
+String items = ["Google","Amazon","Facebook","Microsoft"];
+String company = "";
+
+public void viewList() {
+        listView = new ListView(this);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.txtItem, items);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                company = items[position];
+                d.hide();
+            }
+        });
+    }
+
+    AlertDialog d;
+
+    public void showDialogListView(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Admin.this);
+        builder.setCancelable(false);
+        //builder.setPositiveButton("OK", null);
+        builder.setView(listView);
+        AlertDialog dialog = builder.create();
+        d = dialog;
+        dialog.show();
+    }
